@@ -1,0 +1,11 @@
+README
+
+This program is intended to convert handwritten characters to strings, using a variant of the k-nearest neighbors algorithm. Essentially, it averages vectors representing the same character to create a centroid vector for each character. Then, when processing an unknown sample, it finds the Euclidean distance from the sample vector to each centroid vector and returns the character corresponding to the smallest squared distance.
+
+I obtained handwriting samples using the included Template.docx, and saving each sample box as a separate 100x100px JPEG. The samples should be named with the represented character at the front of the string; for example, a picture of 'A' should be named 'A________.jpg'. Save these samples in the Samples subdirectory.
+
+At this point, you can find the centroid vectors with the find_centroids() function. You can also pass this output to the write_to_file() function to save it as a CSV, and load it with load_centroids(). generate_centroids() can be used to visualize the centroid vector as a grayscaled JPEG image.
+
+Now, you can use the program to identify an unknown sample. load_image() will load that sample and convert it to a grayscaled vector; then pass that vector and the set of centroids in to predict() to return the program's best guess.
+
+I've included some handwriting samples, but I've only been able to obtain samples from four people so far. The more samples you have, the better the program will work.
