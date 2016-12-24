@@ -81,4 +81,4 @@ def predict(vec, centroids):
 
 def generate_centroid(character, centroids):
 	rescaled = np.array(centroids[character]).reshape((40,40)).astype(np.uint8)
-	Image.fromarray(rescaled).save("{char}Centroid.jpg".format(char=character))
+	Image.fromarray(rescaled).save(os.getcwd() + "/Centroids/" + "{char}Centroid.jpg".format(char=character))
