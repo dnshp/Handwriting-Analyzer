@@ -9,3 +9,5 @@ At this point, you can find the centroid vectors with the find_centroids() funct
 Now, you can use the program to identify an unknown sample. load_image() will load that sample and convert it to a grayscaled vector; then pass that vector and the set of centroids in to predict() to return the program's best guess.
 
 I've included some handwriting samples, but I've only been able to obtain samples from four people so far. The more samples you have, the better the program will work.
+
+The autoslice() function included in slicer.py can be used to split the sample sheet into its constituent letter boxes - a process much quicker than doing it manually.
